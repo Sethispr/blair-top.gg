@@ -128,7 +128,7 @@
       max-width: 100%;
       height: auto;
       display: block;
-      margin-bottom: 1.20rem;
+      margin-bottom: 1.2rem;
       border-radius: var(--bl-radius-sm);
 
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -180,11 +180,10 @@
       /**
          * text di konten
          * lebih mending pake lower tpi bisa uppercase (yg di coret)
-         * di bug dulu ntar fix atau ganti
-         * ganti “ sama " to fix
+         * di coret dulu ntar fix padding atau ganti
          */
       &::before {
-        content: "note”;
+        /* content: "note”; */
         display: block;
         font-weight: 600;
         font-size: 1.67rem;
@@ -192,7 +191,7 @@
         /* text-transform: uppercase; */
         letter-spacing: 0.05em;
         margin-bottom: 0.5rem;
-        opacity: 1.0;
+        opacity: 1;
       }
     }
 
@@ -242,6 +241,7 @@
     }
   }
 }
+
 </style>
 
 <div class="blair-container"><img
