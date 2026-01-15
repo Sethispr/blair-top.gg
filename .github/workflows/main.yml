@@ -1,0 +1,30 @@
+name: Prettier v3.7.4 Format
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth 0 is required for same_commit: true
+          fetch-depth: 0
+
+      - name: Prettier Action
+        uses: creyD/prettier_action@v4.3
+        with:
+          same_commit: true
+          file_pattern: "**/*.{css,html,md}"
+          prettier_options: "--write --single-quote --no-semi --tab-width 2"
+          prettier_version: "3.7.4"
+          only_changed: true
+          git_identity: author
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
