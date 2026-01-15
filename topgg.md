@@ -2,35 +2,13 @@
   /**
    * @blair top.gg description styles
    * for future ref, inter body, sora header
-   * code block text could use the jetbrains mono font
    * documentation can be improved but indonesian will be used here
-   * last updated 14 january, fixes mobile badges and tweaked some paddings
-   * improve, update, add more preview images
-   * formatter : Prettier v3.7.4
+   * last updated 14 january
+   * formatter : Prettier v3.8.0
    * linter: DavidAnson markdownlint v0.40.0
    */
   @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
-
-  body {
-    background-color: #1e1e2e;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-  }
-
-  ::selection {
-    background-color: #413a5a;
-    color: #cba6f7 !important;
-    -webkit-text-fill-color: #cba6f7 !important;
-  }
-
-  ::-moz-selection {
-    background-color: #413a5a;
-    color: #cba6f7 !important;
-  }
 
   @layer blair {
     /**
@@ -269,9 +247,15 @@
 </style>
 
 <div class="blair-container" role="main" aria-label="Blair Description"><img
-    src="https://raw.githubusercontent.com/Sethispr/blair/main/src/assets/IMG_7148.png"
+    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/IMG_7297.webp"
     alt="Blair cards showcase banner"
     class="blair-container__image"
+    width="611"
+    height="245"
+    fetchpriority="high"
+    loading="eager"
+    decoding="sync"
+    referrerpolicy="no-referrer"
   /><div class="blair-container__header" role="group" aria-label="Blair Info and Links">
     <div class="blair-container__header-item">
       <span
@@ -309,12 +293,23 @@
       </a>
     </div>
   </div><blockquote aria-label="Status Update">Blair is in a <strong>very early</strong> stage of testing! Join the <a href="https://discord.com/invite/aGZay2PhDp">Discord Server</a> to get the limited <span class="blair-container__highlight">@Tester 2026</span> role. Blair will have a <strong>collection wipe</strong> so expect a lot of sp, Blair will be back on <strong>Jan 16-17</strong>.</blockquote><img
-    src="https://raw.githubusercontent.com/Sethispr/blair/ba250232d3436bea8c0fd0f8057beb71456e1347/src/assets/IMG_5581.png"
+    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/IMG_7295.webp"
     alt="Preview of seth’s profile card"
     class="blair-container__image"
+    width="611"
+    height="346"
+    fetchpriority="high"
+    loading="eager"
+    decoding="sync"
+    referrerpolicy="no-referrer"
   /><img
-    src="https://raw.githubusercontent.com/Sethispr/blair/main/src/assets/IMG_5582.png"
+    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/IMG_7296.webp"
     alt="Preview of mawii’s profile card"
     class="blair-container__image"
+    width="611"
+    height="346"
+    fetchpriority="high"
+    loading="eager"
+    decoding="sync"
+    referrerpolicy="no-referrer"
   /><i>blair v0.2.0</i></div>
- 
