@@ -1,4 +1,4 @@
-name: Prettier v3.7.4 formatter
+name: Prettier v3.8.0
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
         with:
           same_commit: true
           prettier_options: "--write **/*.{js,css,html,md} --single-quote --no-semi --tab-width 2"
-          prettier_version: "3.7.4"
+          prettier_version: "3.8.0"
           only_changed: true
           git_identity: author
         env:
