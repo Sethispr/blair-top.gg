@@ -3,9 +3,9 @@
    * @blair top.gg description styles
    * for future ref, inter body, sora header
    * documentation can be improved but indonesian will be used here
-   * last updated 14 january
-   * formatter : prettier v3.8.0
-   * linter : davidanson markdownlint v0.40.0
+   * last updated 15 january
+   * formatter: prettier v3.8.0
+   * linter: davidanson markdownlint v0.40.0
    */
   @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
@@ -98,10 +98,10 @@
         max-width: 100%;
         height: auto;
         display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 1.2rem;
         border-radius: var(--bl-radius-sm);
-
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       }
 
       .blair-container__badge {
@@ -212,11 +212,11 @@
 </style>
 
 <div class="blair-container" role="main" aria-label="Blair Description"><img
-    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/IMG_7297.webp"
+    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/blairshowcasenowgoplayblairorelse.webp"
     alt="Blair cards showcase banner"
     class="blair-container__image"
-    width="611"
-    height="245"
+    width="1222"
+    height="491"
     fetchpriority="high"
     loading="eager"
     decoding="sync"
@@ -258,21 +258,21 @@
       </a>
     </div>
   </div><blockquote aria-label="Status Update">Blair is in a <strong>very early</strong> stage of testing! Join the <a href="https://discord.com/invite/aGZay2PhDp">Discord Server</a> to get the limited <span class="blair-container__highlight">@Tester 2026</span> role. Blair will have a <strong>collection wipe</strong> so expect a lot of sp, Blair will be back on <strong>Jan 16-17</strong>.</blockquote><img
-    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/IMG_7295.webp"
+    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/sethprofilecardblairwillcometoyourhouse.webp"
     alt="Preview of seth’s profile card"
     class="blair-container__image"
-    width="611"
-    height="346"
+    width="1222"
+    height="692"
     fetchpriority="high"
     loading="eager"
     decoding="sync"
     referrerpolicy="no-referrer"
   /><img
-    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/IMG_7296.webp"
+    src="https://cdn.jsdelivr.net/gh/Sethispr/blair-top.gg/assets/mawiiprofilecardgoplayblairnowbuddy.webp"
     alt="Preview of mawii’s profile card"
     class="blair-container__image"
-    width="611"
-    height="346"
+    width="1222"
+    height="692"
     fetchpriority="high"
     loading="eager"
     decoding="sync"
