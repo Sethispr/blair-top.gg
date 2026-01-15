@@ -35,7 +35,6 @@
       --bl-radius-lg: 16px;
       --bl-radius-md: 8px;
       --bl-radius-sm: 4px;
-      --bl-ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
       --bl-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       --bl-glass-bg: linear-gradient(135deg, var(--ctp-mauve-alpha), transparent);
       --bl-glass-border: 1px solid rgba(203, 166, 247, 0.2);
@@ -49,11 +48,6 @@
       background: var(--ctp-mauve-alpha) !important;
       color: var(--ctp-mauve);
       -webkit-text-fill-color: var(--ctp-mauve);
-    }
-
-    ::-moz-selection {
-       background-color: var(--bl-selection-bg);
-       color: var(--ctp-mauve);
     }
 
     /**
@@ -90,13 +84,12 @@
           gap: 1rem;
         }
       }
-
+      
       /**
        * aset
        */
       .blair-container__image {
         max-width: 100%;
-        height: auto;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -140,29 +133,11 @@
         border-left: 4px solid var(--ctp-mauve);
         border-radius: 4px var(--bl-radius-lg) var(--bl-radius-lg) 4px;
 
-        backdrop-filter: none;
         box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
 
         color: var(--ctp-subtext);
         font-size: 0.95em;
         font-style: normal;
-
-        /**
-         * text di konten
-         * lebih mending pake lower tpi bisa uppercase (yg di coret)
-         * di coret dulu ntar fix atau ganti
-         */
-        &::before {
-          /* content: "note"; */
-          display: block;
-          font-weight: 600;
-          font-size: 1.67rem;
-          color: var(--ctp-mauve);
-          /* text-transform: uppercase; */
-          letter-spacing: 0.05em;
-          margin-bottom: 0.5rem;
-          opacity: 1;
-        }
       }
 
       code {
@@ -182,7 +157,6 @@
         padding: 0.2em 0.4em;
         border-radius: 6px;
         border: 1px solid rgba(203, 166, 247, 0.2);
-        backdrop-filter: none;
         white-space: nowrap;
         display: inline-block;
         line-height: 1.2;
@@ -217,8 +191,7 @@
     class="blair-container__image"
     width="1222"
     height="491"
-    fetchpriority="high"
-    loading="eager"
+    style="aspect-ratio: 611/245;"
     decoding="sync"
     referrerpolicy="no-referrer"
   /><div class="blair-container__header" role="group" aria-label="Blair Info and Links">
@@ -263,8 +236,7 @@
     class="blair-container__image"
     width="1222"
     height="692"
-    fetchpriority="high"
-    loading="eager"
+    style="aspect-ratio: 611/346;"
     decoding="sync"
     referrerpolicy="no-referrer"
   /><img
@@ -273,8 +245,7 @@
     class="blair-container__image"
     width="1222"
     height="692"
-    fetchpriority="high"
-    loading="eager"
+    style="aspect-ratio: 611/346;"
     decoding="sync"
     referrerpolicy="no-referrer"
   /><i>blair v0.2.0</i></div>
