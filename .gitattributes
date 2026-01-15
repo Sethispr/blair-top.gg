@@ -1,0 +1,8 @@
+* text=auto
+
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+
+# add the markdown files to percentage bar
+*.md linguist-detectable
