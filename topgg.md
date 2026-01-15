@@ -84,7 +84,7 @@
           gap: 1rem;
         }
       }
-      
+
       /**
        * aset
        */
@@ -173,13 +173,6 @@
           opacity: 0.8;
           border-bottom-color: var(--ctp-mauve);
         }
-      }
-
-      hr {
-        border: 0;
-        height: 1px;
-        background: var(--ctp-surface);
-        margin-block: 2rem;
       }
     }
   }
