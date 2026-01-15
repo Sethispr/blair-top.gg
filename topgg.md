@@ -12,6 +12,26 @@
   @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
 
+  body {
+    background-color: #1e1e2e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: #413a5a;
+    color: #cba6f7 !important;
+    -webkit-text-fill-color: #cba6f7 !important;
+  }
+
+  ::-moz-selection {
+    background-color: #413a5a;
+    color: #cba6f7 !important;
+  }
+
   @layer blair {
     /**
      * @section configurasi
@@ -69,8 +89,14 @@
      * warna nya select bg
      */
     ::selection {
-      background: var(--ctp-mauve-alpha);
+      background: var(--ctp-mauve-alpha) !important;
       color: var(--ctp-mauve);
+      -webkit-text-fill-color: var(--ctp-mauve);
+    }
+
+    ::-moz-selection {
+       background-color: var(--bl-selection-bg);
+       color: var(--ctp-mauve);
     }
 
     /**
@@ -291,4 +317,4 @@
     alt="Preview of mawii’s profile card"
     class="blair-container__image"
   /><i>blair v0.2.0</i></div>
-  
+ 
