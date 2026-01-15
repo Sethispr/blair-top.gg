@@ -4,8 +4,8 @@
    * for future ref, inter body, sora header
    * documentation can be improved but indonesian will be used here
    * last updated 14 january
-   * formatter : Prettier v3.8.0
-   * linter: DavidAnson markdownlint v0.40.0
+   * formatter : prettier v3.8.0
+   * linter : davidanson markdownlint v0.40.0
    */
   @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
@@ -43,27 +43,6 @@
     }
 
     /**
-     * animasi
-     */
-    @keyframes blair-fade-in {
-      from {
-        opacity: 0;
-        transform: translate3d(0, 15px, 0);
-      }
-      to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .blair-container > * {
-        animation: none !important;
-        transform: none !important;
-      }
-    }
-
-    /**
      * warna nya select bg
      */
     ::selection {
@@ -97,20 +76,6 @@
       overflow: hidden;
       position: relative;
       isolation: isolate;
-
-      & > * {
-        animation: blair-fade-in 0.6s var(--bl-ease-out) both;
-      }
-
-      & > *:nth-child(1) {
-        animation-delay: 100ms;
-      }
-      & > *:nth-child(2) {
-        animation-delay: 150ms;
-      }
-      & > *:nth-child(3) {
-        animation-delay: 200ms;
-      }
 
       .blair-container__header {
         display: flex;
