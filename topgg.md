@@ -1,254 +1,252 @@
 <style>
-/**
-   * blair top.gg description styles
+  /**
+   * @blair top.gg description styles
    * for future ref, inter body, sora header
+   * code block text could use the jetbrains mono font
    * documentation can be improved but indonesian will be used here
-   * last updated 14 january, fixes the mobile badges from stretching,
+   * last updated 14 january, fixes mobile badges and tweaked some paddings
    * improve, update, add more preview images
    * formatter : Prettier v3.7.4
    * linter: DavidAnson markdownlint v0.40.0
    */
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
 
-@layer blair {
-  /**
+  @layer blair {
+    /**
      * @section configurasi
-     * cattpuccin mauve tpi agak beda dengan ori sama kyk blair
+     * cattpuccin mauve sama @blair
+     * mode putih tidak akan ada support
      * https://catppuccin.com/palette/
      */
-  :root {
-    /* warna */
-    --ctp-base: #1e1e2e;
-    --ctp-surface: #313244;
-    --ctp-text: #cdd6f4;
-    --ctp-subtext: #a6adc8;
-    --ctp-mauve: #cba6f7;
+    :root {
+      /* warna */
+      --ctp-base: #1e1e2e;
+      --ctp-surface: #313244;
+      --ctp-text: #cdd6f4;
+      --ctp-subtext: #a6adc8;
+      --ctp-mauve: #cba6f7;
 
-    --ctp-mauve-alpha: rgba(203, 166, 247, 0.1);
-    --ctp-mauve-glow: rgba(203, 166, 247, 0.08);
+      --ctp-mauve-alpha: rgba(203, 166, 247, 0.1);
+      --ctp-mauve-glow: rgba(203, 166, 247, 0.08);
 
-    /* misc */
-    --bl-font-sans: "Lexend Deca", system-ui, sans-serif;
-    --bl-font-mono: "JetBrains Mono", monospace;
-    --bl-pad-root: 1.5rem;
-    --bl-radius-lg: 16px;
-    --bl-radius-md: 8px;
-    --bl-radius-sm: 4px;
-    --bl-ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --bl-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    --bl-glass-bg: linear-gradient(135deg, var(--ctp-mauve-alpha), transparent);
-    --bl-glass-border: 1px solid rgba(203, 166, 247, 0.2);
-    --bl-shadow-glass: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  }
+      /* misc */
+      --bl-font-sans: "Lexend Deca", system-ui, sans-serif;
+      --bl-font-mono: "JetBrains Mono", monospace;
+      --bl-pad-root: 1.5rem;
+      --bl-radius-lg: 16px;
+      --bl-radius-md: 8px;
+      --bl-radius-sm: 4px;
+      --bl-ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --bl-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --bl-glass-bg: linear-gradient(135deg, var(--ctp-mauve-alpha), transparent);
+      --bl-glass-border: 1px solid rgba(203, 166, 247, 0.2);
+      --bl-shadow-glass: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
 
-  /**
+    /**
      * animasi
      */
-  @keyframes blair-fade-in {
-    from {
-      opacity: 0;
-      transform: translate3d(0, 15px, 0);
+    @keyframes blair-fade-in {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 15px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
     }
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  }
 
-  /**
+    @media (prefers-reduced-motion: reduce) {
+      .blair-container > * {
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+
+    /**
      * warna nya select bg
      */
-  ::selection {
-    background: var(--ctp-mauve-alpha);
-    color: var(--ctp-mauve);
-  }
+    ::selection {
+      background: var(--ctp-mauve-alpha);
+      color: var(--ctp-mauve);
+    }
 
-  /**
+    /**
      * @block blair-container
      * konten utama
      */
-  .blair-container {
-    background-color: var(--ctp-base);
-    background-image:
-      radial-gradient(
-        circle at 100% 0%,
-        var(--ctp-mauve-glow) 0%,
-        transparent 40%
-      ),
-      radial-gradient(
-        circle at 0% 100%,
-        rgba(203, 166, 247, 0.05) 0%,
-        transparent 40%
-      );
+    .blair-container {
+      background-color: var(--ctp-base);
+      background-image:
+        radial-gradient(circle at 100% 0%, var(--ctp-mauve-glow) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(203, 166, 247, 0.05) 0%, transparent 40%);
 
-    color: var(--ctp-text);
-    font-family: var(--bl-font-sans);
-    line-height: 1.6;
-    padding: var(--bl-pad-root);
-    border-radius: var(--bl-radius-md);
-    -webkit-font-smoothing: antialiased;
-    box-shadow: var(--bl-shadow-glass);
-    overflow: hidden;
-    position: relative;
-    isolation: isolate;
+      color: var(--ctp-text);
+      font-family: var(--bl-font-sans);
+      line-height: 1.6;
+      padding: var(--bl-pad-root);
+      border-radius: var(--bl-radius-md);
+      -webkit-font-smoothing: antialiased;
+      box-shadow: var(--bl-shadow-glass);
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
 
-    & > * {
-      animation: blair-fade-in 0.6s var(--bl-ease-out) both;
-    }
-
-    & > *:nth-child(1) {
-      animation-delay: 100ms;
-    }
-    & > *:nth-child(2) {
-      animation-delay: 150ms;
-    }
-    & > *:nth-child(3) {
-      animation-delay: 200ms;
-    }
-
-    .blair-container__header {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      /* margin-bottom: 0.1rem; */
-
-      .blair-container__header-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
+      & > * {
+        animation: blair-fade-in 0.6s var(--bl-ease-out) both;
       }
-    }
 
-    /**
+      & > *:nth-child(1) {
+        animation-delay: 100ms;
+      }
+      & > *:nth-child(2) {
+        animation-delay: 150ms;
+      }
+      & > *:nth-child(3) {
+        animation-delay: 200ms;
+      }
+
+      .blair-container__header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        /* margin-bottom: 0.1rem; */
+
+        .blair-container__header-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+
+      /**
        * aset
        */
-    .blair-container__image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 1.2rem;
-      border-radius: var(--bl-radius-sm);
-
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .blair-container__badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--ctp-mauve);
-      border-radius: var(--bl-radius-md);
-      padding: 1px;
-      overflow: hidden;
-      height: 26px;
-      flex-shrink: 0;
-
-      transition: transform 0.2s var(--bl-ease-bounce);
-
-      img {
+      .blair-container__image {
+        max-width: 100%;
+        height: auto;
         display: block;
-        height: 24px;
-        width: auto;
-        border-radius: var(--bl-radius-md);
-        pointer-events: none;
-      }
-    }
+        margin-bottom: 1.2rem;
+        border-radius: var(--bl-radius-sm);
 
-    /**
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .blair-container__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--ctp-mauve);
+        border-radius: var(--bl-radius-md);
+        padding: 1px;
+        overflow: hidden;
+        height: 26px;
+        flex-shrink: 0;
+
+        transition: transform 0.2s var(--bl-ease-bounce);
+
+        img {
+          display: block;
+          height: 24px;
+          width: auto;
+          border-radius: var(--bl-radius-md);
+          pointer-events: none;
+        }
+      }
+
+      /**
        * @element blockquote
        * kyk pake > di markdown
        */
-    blockquote {
-      position: relative;
-      margin-block: 1.25rem;
-      padding: 1rem 0.5rem;
+      blockquote {
+        position: relative;
+        margin-block: 1.25rem;
+        padding: 1rem 0.5rem;
 
-      background: var(--bl-glass-bg);
-      border: var(--bl-glass-border);
-      border-left: 4px solid var(--ctp-mauve);
-      border-radius: 4px var(--bl-radius-lg) var(--bl-radius-lg) 4px;
+        background: var(--bl-glass-bg);
+        border: var(--bl-glass-border);
+        border-left: 4px solid var(--ctp-mauve);
+        border-radius: 4px var(--bl-radius-lg) var(--bl-radius-lg) 4px;
 
-      backdrop-filter: none;
-      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+        backdrop-filter: none;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
 
-      color: var(--ctp-subtext);
-      font-size: 0.95em;
-      font-style: normal;
+        color: var(--ctp-subtext);
+        font-size: 0.95em;
+        font-style: normal;
 
-      /**
+        /**
          * text di konten
          * lebih mending pake lower tpi bisa uppercase (yg di coret)
-         * di coret dulu ntar fix padding atau ganti
+         * di coret dulu ntar fix atau ganti
          */
-      &::before {
-        /* content: "note”; */
-        display: block;
-        font-weight: 600;
-        font-size: 1.67rem;
+        &::before {
+          /* content: "note"; */
+          display: block;
+          font-weight: 600;
+          font-size: 1.67rem;
+          color: var(--ctp-mauve);
+          /* text-transform: uppercase; */
+          letter-spacing: 0.05em;
+          margin-bottom: 0.5rem;
+          opacity: 1;
+        }
+      }
+
+      code {
         color: var(--ctp-mauve);
-        /* text-transform: uppercase; */
-        letter-spacing: 0.05em;
-        margin-bottom: 0.5rem;
-        opacity: 1;
+        background-color: var(--ctp-surface);
+        padding: 0.2em 0.4em;
+        border-radius: var(--bl-radius-sm);
+        font-family: var(--bl-font-mono) !important; /* top.gg default diganti */
+        font-size: 0.85em;
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
-    }
 
-    code {
-      color: var(--ctp-mauve);
-      background-color: var(--ctp-surface);
-      padding: 0.2em 0.4em;
-      border-radius: var(--bl-radius-sm);
-      font-family: var(--bl-font-mono) !important; /* top.gg default diganti */
-      font-size: 0.85em;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .blair-container__highlight {
-      color: var(--ctp-mauve);
-      font-weight: 600;
-      background: rgba(203, 166, 247, 0.15);
-      padding: 0.2em 0.4em;
-      border-radius: 6px;
-      border: 1px solid rgba(203, 166, 247, 0.2);
-      backdrop-filter: none;
-      white-space: nowrap;
-      display: inline-block;
-      line-height: 1.2;
-    }
-
-    a:where(.blair-container *) {
-      color: var(
-        --ctp-mauve
-      ) !important; /* klo nggak top.gg nanti ganti warna nya */
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      border-bottom: 1px solid transparent;
-
-      &:is(:hover, :focus-visible) {
-        opacity: 0.8;
-        border-bottom-color: var(--ctp-mauve);
+      .blair-container__highlight {
+        color: var(--ctp-mauve);
+        font-weight: 600;
+        background: rgba(203, 166, 247, 0.15);
+        padding: 0.2em 0.4em;
+        border-radius: 6px;
+        border: 1px solid rgba(203, 166, 247, 0.2);
+        backdrop-filter: none;
+        white-space: nowrap;
+        display: inline-block;
+        line-height: 1.2;
       }
-    }
 
-    hr {
-      border: 0;
-      height: 1px;
-      background: var(--ctp-surface);
-      margin-block: 2rem;
+      a:where(.blair-container *) {
+        color: var(--ctp-mauve) !important; /* klo nggak top.gg nanti ganti warna nya */
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid transparent;
+
+        &:is(:hover, :focus-visible) {
+          opacity: 0.8;
+          border-bottom-color: var(--ctp-mauve);
+        }
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: var(--ctp-surface);
+        margin-block: 2rem;
+      }
     }
   }
-}
-
 </style>
 
-<div class="blair-container"><img
+<div class="blair-container" role="main" aria-label="Blair Description"><img
     src="https://raw.githubusercontent.com/Sethispr/blair/main/src/assets/IMG_7148.png"
-    alt="blair cards preview banner"
+    alt="Blair cards showcase banner"
     class="blair-container__image"
-  /><div class="blair-container__header">
+  /><div class="blair-container__header" role="group" aria-label="Blair Info and Links">
     <div class="blair-container__header-item">
       <span
         ><strong>Official Discord/Support Server: </strong
@@ -257,10 +255,13 @@
       <a
         href="https://discord.com/invite/aGZay2PhDp"
         class="blair-container__badge"
+        aria-label="Join our Official Discord server"
       >
         <img
           src="https://img.shields.io/badge/Discord-cba6f7?style=for-the-badge&logo=discord&logoColor=11111b"
           height="24"
+          alt=""
+          aria-hidden="true"
         />
       </a>
     </div>
@@ -271,19 +272,23 @@
       <a
         href="https://sethispr.github.io/blair/"
         class="blair-container__badge"
+        aria-label="View Blair documentation"
       >
         <img
           src="https://img.shields.io/badge/github%20pages-cba6f7?style=for-the-badge&logo=github&logoColor=11111b"
           height="24"
+          alt=""
+          aria-hidden="true"
         />
       </a>
     </div>
-  </div><blockquote>Blair is in a <strong>very early</strong> stage of testing! Join the <a href="https://discord.com/invite/aGZay2PhDp">Discord Server</a> to get the limited <span class="blair-container__highlight">@Tester 2026</span> role. Blair will have a <strong>collection wipe</strong> so expect a lot of sp, Blair will be back on <strong>Jan 16-17</strong>.</blockquote><img
+  </div><blockquote aria-label="Status Update">Blair is in a <strong>very early</strong> stage of testing! Join the <a href="https://discord.com/invite/aGZay2PhDp">Discord Server</a> to get the limited <span class="blair-container__highlight">@Tester 2026</span> role. Blair will have a <strong>collection wipe</strong> so expect a lot of sp, Blair will be back on <strong>Jan 16-17</strong>.</blockquote><img
     src="https://raw.githubusercontent.com/Sethispr/blair/ba250232d3436bea8c0fd0f8057beb71456e1347/src/assets/IMG_5581.png"
-    alt="seth profile card preview 1"
+    alt="Preview of seth’s profile card"
     class="blair-container__image"
   /><img
     src="https://raw.githubusercontent.com/Sethispr/blair/main/src/assets/IMG_5582.png"
-    alt="mawii profile card preview 2"
+    alt="Preview of mawii’s profile card"
     class="blair-container__image"
   /><i>blair v0.2.0</i></div>
+  
