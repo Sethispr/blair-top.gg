@@ -2,33 +2,12 @@
    * @blair top.gg description styles
    * for future ref, inter body, sora header
    * documentation can be improved but indonesian will be used here
-   * last updated 14 january
-   * improve, update, add more preview images esp the bot itself
-   * formatter : Prettier v3.8.0
-   * linter: DavidAnson markdownlint v0.40.0
+   * last updated 15 january
+   * formatter: prettier v3.8.0
+   * linter: davidanson markdownlint v0.40.0
    */
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
-
-body {
-  background-color: #1e1e2e;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-::selection {
-  background-color: #413a5a;
-  color: #cba6f7 !important;
-  -webkit-text-fill-color: #cba6f7 !important;
-}
-
-::-moz-selection {
-  background-color: #413a5a;
-  color: #cba6f7 !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 @layer blair {
   /**
@@ -49,8 +28,8 @@ body {
     --ctp-mauve-glow: rgba(203, 166, 247, 0.08);
 
     /* misc */
-    --bl-font-sans: "Lexend Deca", system-ui, sans-serif;
-    --bl-font-mono: "JetBrains Mono", monospace;
+    --bl-font-sans: 'Lexend Deca', system-ui, sans-serif;
+    --bl-font-mono: 'JetBrains Mono', monospace;
     --bl-pad-root: 1.5rem;
     --bl-radius-lg: 16px;
     --bl-radius-md: 8px;
@@ -60,27 +39,6 @@ body {
     --bl-glass-bg: linear-gradient(135deg, var(--ctp-mauve-alpha), transparent);
     --bl-glass-border: 1px solid rgba(203, 166, 247, 0.2);
     --bl-shadow-glass: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  }
-
-  /**
-     * animasi
-     */
-  @keyframes blair-fade-in {
-    from {
-      opacity: 0;
-      transform: translate3d(0, 15px, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .blair-container > * {
-      animation: none !important;
-      transform: none !important;
-    }
   }
 
   /**
@@ -118,20 +76,6 @@ body {
     position: relative;
     isolation: isolate;
 
-    & > * {
-      animation: blair-fade-in 0.6s var(--bl-ease-out) both;
-    }
-
-    & > *:nth-child(1) {
-      animation-delay: 100ms;
-    }
-    & > *:nth-child(2) {
-      animation-delay: 150ms;
-    }
-    & > *:nth-child(3) {
-      animation-delay: 200ms;
-    }
-
     .blair-container__header {
       display: flex;
       flex-direction: column;
@@ -153,10 +97,10 @@ body {
       max-width: 100%;
       height: auto;
       display: block;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 1.2rem;
       border-radius: var(--bl-radius-sm);
-
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .blair-container__badge {
