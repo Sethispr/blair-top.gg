@@ -1,6 +1,6 @@
 # blair-top.gg
 
-top.gg description page, styles and content for [@blair](https://top.gg/bot/1120429051404877945)
+some over engineered, mobile friendly top.gg description page, styles and contents for [@blair](https://top.gg/bot/1120429051404877945)
 
 ---
 
