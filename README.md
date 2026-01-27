@@ -4,6 +4,8 @@ Some over-engineered, mobile friendly top.gg description page, styles and conten
 
 ---
 
+to:do replace jsdelivr cdn with wsrv.nl instead
+
 ### top.gg links
 
 - [top.gg main page](https://top.gg/bot/1120429051404877945)
